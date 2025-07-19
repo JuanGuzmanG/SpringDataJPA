@@ -1,4 +1,4 @@
-package jparelations.springdatajpa.unidirectional.OneToOne;
+package jparelations.springdatajpa.bidirectional.OneToOne;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -10,11 +10,14 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity(name = "uni-ParkingSpot-one_to_one")
-@Table(name = "uni-ParkingSpot-one_to_one")
+@Entity(name = "bi-ParkingSpot-one_to_one")
+@Table(name = "bi-ParkingSpot-one_to_one")
 public class ParkingSpot {
 
     @Id
-    @GeneratedValue(strategy = jakarta.persistence.GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @OneToOne(mappedBy = "parkingSpot")
+    private Employee employee;
 }

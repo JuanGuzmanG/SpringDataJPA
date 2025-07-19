@@ -1,4 +1,4 @@
-package jparelations.springdatajpa.unidirectional.ManyToMany;
+package jparelations.springdatajpa.bidirectional.ManyToMany;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -12,8 +12,8 @@ import java.util.List;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity(name = "uni-Book-many-to-many")
-@Table(name = "uni-Book-many-to-many")
+@Entity(name = "bi-Book-many-to-many")
+@Table(name = "bi-Book-many-to-many")
 public class Book {
 
     @Id

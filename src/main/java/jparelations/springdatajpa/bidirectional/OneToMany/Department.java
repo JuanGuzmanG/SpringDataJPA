@@ -15,11 +15,11 @@ import java.util.List;
 @NoArgsConstructor
 @Entity(name = "bi-Deparment-one_to-many")
 @Table(name = "bi-Deparment-one_to-many")
-public class Deparment {
+public class Department {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long Id;
 
-    @OneToMany(mappedBy = "deparment")
+    @OneToMany(mappedBy = "department")
     private List<Employee> employees;
 }

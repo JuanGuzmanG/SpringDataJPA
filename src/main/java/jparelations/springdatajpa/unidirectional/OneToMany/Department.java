@@ -15,7 +15,7 @@ import java.util.List;
 @NoArgsConstructor
 @Entity(name = "uni-Deparment-one_to-many")
 @Table(name = "uni-Deparment-one_to-many")
-public class Deparment {
+public class Department {
     @Id
     @GeneratedValue(strategy = jakarta.persistence.GenerationType.IDENTITY)
     private Long Id;

@@ -1,4 +1,4 @@
-package jparelations.springdatajpa.unidirectional.one_to_one.OneToOne;
+package jparelations.springdatajpa.unidirectional.OneToOne;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -18,8 +18,6 @@ public class Employee {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    // employee can have only one parking spot
-    // and only employee can access the parking spot
     @OneToOne
     @JoinColumn(name = "parking_spot_id")
     private ParkingSpot parkingSpot;

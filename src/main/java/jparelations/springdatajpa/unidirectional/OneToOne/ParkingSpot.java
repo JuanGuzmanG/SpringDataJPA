@@ -1,4 +1,4 @@
-package jparelations.springdatajpa.unidirectional.one_to_one.OneToOne;
+package jparelations.springdatajpa.unidirectional.OneToOne;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

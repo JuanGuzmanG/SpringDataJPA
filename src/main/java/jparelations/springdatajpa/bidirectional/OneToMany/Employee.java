@@ -1,4 +1,4 @@
-package jparelations.springdatajpa.unidirectional.OneToMany;
+package jparelations.springdatajpa.bidirectional.OneToMany;
 
 
 import jakarta.persistence.*;
@@ -11,10 +11,14 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity(name = "uni-Employee-one_to-many")
-@Table(name = "uni-Employee-one_to-many")
+@Entity(name = "bi-Employee-one_to-many")
+@Table(name = "bi-Employee-one_to-many")
 public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long Id;
+
+    @ManyToOne
+    @JoinColumn(name = "department_id")
+    private Department department;
 }

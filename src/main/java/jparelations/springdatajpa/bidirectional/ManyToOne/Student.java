@@ -1,4 +1,4 @@
-package jparelations.springdatajpa.unidirectional.ManyToOne;
+package jparelations.springdatajpa.bidirectional.ManyToOne;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -10,8 +10,8 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity(name = "uni-Student-many-to-one")
-@Table(name = "uni-Student-many-to-one")
+@Entity(name = "bi-Student-many-to-one")
+@Table(name = "bi-Student-many-to-one")
 public class Student {
 
     @Id
