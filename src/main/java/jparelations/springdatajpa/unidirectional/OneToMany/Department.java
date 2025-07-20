@@ -20,7 +20,7 @@ public class Department {
     @GeneratedValue(strategy = jakarta.persistence.GenerationType.IDENTITY)
     private Long Id;
 
-    @OneToMany
+    @OneToMany(targetEntity = Employee.class, fetch = FetchType.LAZY)
     @JoinColumn(name = "deparment_id")
     private List<Employee> employees;
 }

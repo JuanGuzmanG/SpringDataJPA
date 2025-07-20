@@ -18,7 +18,7 @@ public class Employee {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @OneToOne
+    @OneToOne(targetEntity = ParkingSpot.class, cascade = CascadeType.PERSIST)
     @JoinColumn(name = "parking_spot_id")
     private ParkingSpot parkingSpot;
 }
